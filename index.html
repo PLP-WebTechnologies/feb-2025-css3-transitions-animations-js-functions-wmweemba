@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS3 Transitions, Animations and Javascript Functions</title>
+        <link rel="stylesheet" href="./styles/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="css3">CSS3</h1>
+            <h2>Transitions, Animations and Javascript Functions</h2>
+            <nav>
+                <ul>
+                    <li><a href="#css3">CSS3</a></li>
+                    <li><a href="#image-grid">Image Grid</a></li>
+                    <li><a href="#front-end-facts">Front End</a></li>
+                    <li><a href="#preferences-section">Set Preferences</a></li>
+                </ul>
+        </header>
+        <main>
+
+            <!-- An image grid of different interesting images -->
+            <section id="image-grid">
+                <h2>Image Section</h2>
+                <p>This is an image section with a interesting abstract images.</p>
+                <div class="grid-container">
+                    <div class="grid-item"><img src="./assets/pexels-carlos-santiago-421908853-18388174.jpg" alt="santiago"></div>
+                    <div class="grid-item"><img src="./assets/pexels-chaitaastic-1797161.jpg" alt="chaitaastic"></div>
+                    <div class="grid-item"><img src="./assets/pexels-kxrz-3846629.jpg" alt="kxrz"></div>
+                    <div class="grid-item"><img src="./assets/pexels-matreding-30241269.jpg" alt="matrending"></div>
+                    <div class="grid-item"><img src="./assets/pexels-omar-167169385-11054687.jpg" alt="omar"></div>
+                    <div class="grid-item"><img src="./assets/pexels-onthecrow-30638768.jpg" alt="onthecrow"></div>
+                    <div class="grid-item"><img src="./assets/pexels-paulo-marcelo-martins-1265830-2412603.jpg" alt="marcelo"></div>
+            </section>
+
+            <!-- A section with a table containg different facts about HTML, CSS and Javascript -->
+            <section id="front-end-facts">
+                <h2>Front-End Facts</h2>
+                <p>Here are some interesting facts about HTML, CSS and Javascript:</p>
+                <table>
+                    <tr>
+                        <th>Language</th>
+                        <th>Year Created</th>
+                        <th>Creator</th>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>1993</td>
+                        <td>Tim Berners-Lee</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>1996</td>
+                        <td>Håkon Wium Lie</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>1995</td>
+                        <td>Brendan Eich</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- A section to capture or retrieve user preferences. -->
+            <section id="preferences-section">
+                <p>Use the form below to input or retrieve your vewing preferences</p>
+                <br>
+                <div class="new preferences">
+                    <button id="new">New Preference</button>
+                </div>
+                <div class="preferences">
+                    <button id="retrieve">Retrieve</button>
+                </div>
+
+                <!-- A form to input your viewing preferences of the different sections of the page. These preferences will be stored locally -->
+                <div class="preference form">
+                    <form id="preference-form">
+                        <label for="section">Select Section:</label>
+                        <select id="section" name="section">
+                            <option value="image-grid">Image Section</option>
+                            <option value="front-end-facts">Front-End Facts</option>
+                            <option value="content">Content</option>
+                        </select>
+
+                        <label for="preference">Select Preference:</label>
+                        <select id="preference" name="preference">
+                            <option value="show">Show</option>
+                            <option value="hide">Hide</option>
+                        </select>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 WSM</p>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" title="Go to top">↑</button>
+
+        <script src="./scripts/script.js"></script>
+</html>

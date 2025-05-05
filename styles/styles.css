@@ -1,0 +1,410 @@
+/* General reset */
+body, h1, h2, p, ul, li, table, th, td, form, select, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center all content and limit width */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+}
+
+/* Main, header, and footer styling */
+main, header, footer {
+    width: 90%; /* Content takes up 90% of the screen width */
+    max-width: 1200px; /* Limit maximum width for larger screens */
+    margin: 0 auto; /* Center content horizontally */
+    text-align: center; /* Center text inside sections */
+}
+
+/* Header styling */
+header {
+    margin-bottom: 20px;
+}
+
+header h1, header h2 {
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #ccc; /* Light gray for subtitle */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4; /* Cyan hover effect */
+}
+
+/* Section styling */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #111; /* Slightly lighter black */
+}
+
+/* Image grid styling */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+    grid-auto-rows: 150px; /* Default row height */
+    gap: 10px; /* Space between grid items */
+    margin-top: 15px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.grid-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.5); /* Cyan shadow */
+}
+
+/* Custom sizes for grid items */
+.grid-item:nth-child(1) {
+    grid-column: span 2; /* Spans 2 columns */
+    grid-row: span 2; /* Spans 2 rows */
+}
+
+.grid-item:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(3) {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.grid-item:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.grid-item:nth-child(6) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.grid-item:nth-child(7) {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+    color: #00bcd4; /* Cyan for table headers */
+}
+
+td {
+    background-color: #111;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select, button {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00bcd4; /* Cyan hover effect */
+    color: #000;
+}
+
+/* Styling the preferences form */
+.preference.form {
+    display: none; /* Hidden initially */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-width: 400px; /* Limit form width */
+    margin: 20px auto; /* Center the form */
+    color: #fff; /* White text */
+    text-align: center;
+}
+
+.preference.form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ccc; /* Light gray text for labels */
+}
+
+/* Dropdown styling */
+.preference.form select {
+    background-color: #333; /* Darker background color */
+    color: #fff; /* White text for readability */
+    border: 1px solid #555; /* Subtle border for contrast */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.preference.form select:hover {
+    background-color: #444; /* Slightly lighter on hover */
+    color: black; /* Ensure text remains black */
+}
+
+.preference.form select, 
+.preference.form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent input background */
+    color: black; /* Black text */
+    font-size: 1rem;
+    outline: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.preference.form select:hover, 
+.preference.form button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly brighter on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.preference.form button {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.preference.form button:hover {
+    background-color: #00bcd4; /* Cyan hover effect for the button */
+    color: #000; /* Black text on hover */
+}
+
+.preference.form p {
+    font-size: 0.9rem;
+    color: #ccc; /* Light gray text for additional info */
+}
+
+/* Styling for the preferences buttons container */
+.new.preferences, .preferences {
+    display: inline-block; /* Ensure buttons are inline */
+    margin: 0 10px; /* Add spacing between buttons */
+}
+
+#preferences-section .preferences-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 15px; /* Add space between the buttons */
+    margin-bottom: 20px; /* Add spacing below the buttons */
+}
+
+/* Smooth transitions for form and sections */
+.preference.form, #image-grid, #front-end-facts, #content {
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in and fade-out */
+    opacity: 1; /* Default opacity */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Back to Top Button Styling */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    background-color: #00bcd4; /* Cyan color */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #008c9e; /* Darker cyan on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Adjust body padding for smaller screens */
+    body {
+        padding: 10px;
+    }
+
+    /* Main, header, and footer adjustments */
+    main, header, footer {
+        width: 100%; /* Use full width for smaller screens */
+        max-width: none; /* Remove max-width restriction */
+    }
+
+    /* Header text adjustments */
+    header h1 {
+        font-size: 2rem; /* Smaller font size for h1 */
+    }
+
+    header h2 {
+        font-size: 1.2rem; /* Smaller font size for h2 */
+    }
+
+    /* Navigation adjustments */
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Reduce spacing between links */
+    }
+
+    /* Section adjustments */
+    section {
+        padding: 10px; /* Reduce padding for sections */
+    }
+
+    /* Image grid adjustments */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        grid-auto-rows: 100px; /* Smaller row height */
+    }
+
+    .grid-item:nth-child(1),
+    .grid-item:nth-child(3) {
+        grid-column: span 2; /* Make larger items span full width */
+    }
+
+    /* Form adjustments */
+    .preference.form {
+        padding: 15px; /* Reduce padding for the form */
+        max-width: 100%; /* Allow form to take full width */
+    }
+
+    .preference.form select, 
+    .preference.form button {
+        font-size: 0.9rem; /* Smaller font size for inputs and buttons */
+    }
+
+    /* Back to Top Button adjustments */
+    #back-to-top {
+        width: 40px; /* Smaller button size */
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    header h1 {
+        font-size: 1.8rem; /* Even smaller font size for h1 */
+    }
+
+    header h2 {
+        font-size: 1rem; /* Even smaller font size for h2 */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .grid-item {
+        grid-column: span 1; /* Ensure all items span one column */
+    }
+
+    nav ul {
+        gap: 5px; /* Reduce spacing further */
+    }
+
+    .preference.form {
+        padding: 10px; /* Further reduce padding */
+    }
+
+    #back-to-top {
+        width: 35px; /* Smaller button size */
+        height: 35px;
+        font-size: 14px;
+    }
+}
